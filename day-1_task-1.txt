@@ -1,0 +1,60 @@
+Q:Write a blog on Difference between HTTP-1.1 vs HTTP-2.0
+
+Ans: HTTP:Hypertext Transfer Protocol
+HTTP is a Client-Server model in which communication will be done through two systems via service request process. 
+Client will be the service receiver and Server will be the service provider that are communicating via requests and responses.
+
+The difference between HTTP-1.1 vs HTTP-2.0:-
+
+1.HTTP-2.0 version released in 2015 and HTTP-1.1 version released in 1997.
+
+2.HTTP-2.0 is multiplexed,it can have multiple requests in parallel over a single TCP connection.As a result, over a one TCP connection response service will be provided for all the requests at a time and HTTP-1.1 is having head-of-line blocking problem,i.e the first request blocks the other requests untill it gets the response service.
+
+3.HTTP-2.0 uses Binary protocols whereas HTTP-1.1 uses textual protocols.
+
+4.HTTP-2.0 do server push.This allows the server to send additional cacheable information to the client whereas HTTP-1.1 will only send the data that is requested by client.
+
+5.HTTP-2.0 is much faster and more efficient than HTTP-1.1
+
+6.Small files load more quickly than large ones.both HTTP-1.1 and HTTP-2.0 compress HTTP messages to make them smaller.but HTTP-2.0 uses a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets.
+
+Q:Write a blog about objects and its internal representation in Javascript
+
+Ans:
+-A JavaScript object is a collection of named values.
+-all the javascript values are objects except premitive types
+-objects can be created with new keyword and dot(.)notation
+-objects in js are comma seperated list of colon seperated properties closed with curly braces
+-objects will have property,property value,property method.
+-we can access the object property with dot(.)notation like (obj.name)or bracket notation like(obj['name'])
+-objects contain any combination of primitive data-types and reference data-types.
+
+object=>person
+properties=>person.name="ABC",person.age=25,
+method=>person.walk()
+        person.eat()
+      
+example of Creation of object with object literal:
+
+var vehicleobj= {
+type:"car",
+model:"BMW",
+};
+
+example of Creation of object with function with new keyword:
+
+function vehicle(type,model,year,colr,engine)
+{
+this.type=type;
+this.model=model;
+this.year=year;
+this.color=color;
+this.engine=engine;
+}
+var tesla=new vehicle("car","tesla","2018","red","v8");
+tesla.key();
+
+
+
+
+
